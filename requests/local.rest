@@ -1,0 +1,7 @@
+
+# Contains the REST client request for testing the GET route.
+# Get all contacts
+GET http://localhost:3000/api/contacts
+
+# Get a contact by ID
+GET http://localhost:3000/api/contacts/681a53a16ce0f6ca3c12e5d3
