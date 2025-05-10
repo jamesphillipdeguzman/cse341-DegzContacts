@@ -1,8 +1,8 @@
 # Get all contacts using the production server or URL link from render.com.
-GET https://cse341-node-2vs3.onrender.com/api/contacts
+GET https://cse341-degzcontacts.onrender.com/api/contacts
 
 # Get a contact by ID using the production server or URL link from render.com.
-GET https://cse341-node-2vs3.onrender.com/api/contacts/681a4dfe78a51989d3d2afb0
+GET https://cse341-degzcontacts.onrender.com/api/contacts/681a53a16ce0f6ca3c12e5d3
 
 
 [
