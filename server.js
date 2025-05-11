@@ -14,9 +14,9 @@ dotenv.config();
 const startServer = async () => {
   try {
     await connectDB();
-
-    app.listen(PORT, () => {
-      console.log(`Server running on http://localhost:${PORT}...!`);
+    // Listen on all interfaces - 0.0.0.0
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`Server running on port ${PORT}...!`);
     });
   } catch (error) {
     console.error("Error connecting to the database:", error);

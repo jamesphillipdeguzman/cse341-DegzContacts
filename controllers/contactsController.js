@@ -4,7 +4,9 @@ import Contacts from "../models/contacts.js";
 
 // Get all contacts
 export const getAllContacts = async (req, res) => {
+  console.log("GET /api/contacts was called"); // Log when the route is accessed
   try {
+    console.log("Fetching all contacts...");
     const contacts = await Contacts.find();
     res.status(200).json(contacts);
   } catch (error) {
@@ -16,6 +18,7 @@ export const getAllContacts = async (req, res) => {
 // Get a contact by ID
 export const findContactById = async (req, res) => {
   try {
+    console.log("Fetching contact by ID...");
     const { id } = req.params;
     const contact = await Contacts.findById(id);
     if (!contact) throw new Error("Contact not found!");
