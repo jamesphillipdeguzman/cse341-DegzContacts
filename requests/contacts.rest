@@ -1,13 +1,13 @@
 
 ### LOCAL: Contains the REST client request for testing ONLY.
-### Get all contacts
+### Get all contacts in localhost
 GET http://localhost:3000/api/contacts
 
-### Get a contact by ID
+### Get a contact by ID in localhost
 GET http://localhost:3000/api/contacts/681a53a16ce0f6ca3c12e5d3
 
 
-### Create a new contact
+### Create a new contact in localhost
 POST http://localhost:3000/api/contacts
 Content-Type: application/json
 
@@ -19,7 +19,7 @@ Content-Type: application/json
     "birthday": "03/05/1949"
 }
 
-### Update a contact
+### Update a contact in localhost
 PUT http://localhost:3000/api/contacts/68231b69e7ac37fad6186fb1
 Content-Type: application/json
 
@@ -28,7 +28,7 @@ Content-Type: application/json
 }
 
 
-### Delete a contact
+### Delete a contact in localhost
 DELETE http://localhost:3000/api/contacts/68231b69e7ac37fad6186fb1
 
 
@@ -38,5 +38,29 @@ DELETE http://localhost:3000/api/contacts/68231b69e7ac37fad6186fb1
 GET https://cse341-degzcontacts.onrender.com/api/contacts
 
 
-### Get a contact by ID using the production server or URL link from render.com.
+### Get a contact by ID in prod
 GET https://cse341-degzcontacts.onrender.com/api/contacts/681a53a16ce0f6ca3c12e5d3
+
+### Create a new contact in prod
+POST https://cse341-degzcontacts.onrender.com/api/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Ewan",
+    "lastName": "De Guzman",
+    "email": "ewan@gmail.com",
+    "favoriteColor": "blue",
+    "birthday": "mm/dd/yyyy"
+}
+
+### Update a contact in prod
+PUT https://cse341-degzcontacts.onrender.com/api/contacts/68236a5deefc85dd1d95fcef
+Content-Type: application/json
+
+{
+    "favoriteColor": "maroon"
+}
+
+
+### Delete a contact in prod
+DELETE https://cse341-degzcontacts.onrender.com/api/contacts/68236a5deefc85dd1d95fcef
