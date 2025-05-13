@@ -1,0 +1,42 @@
+
+### LOCAL: Contains the REST client request for testing ONLY.
+### Get all contacts
+GET http://localhost:3000/api/contacts
+
+### Get a contact by ID
+GET http://localhost:3000/api/contacts/681a53a16ce0f6ca3c12e5d3
+
+
+### Create a new contact
+POST http://localhost:3000/api/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Efren",
+    "lastName": "De Guzman",
+    "email": "efrendeguzman@gmail.com",
+    "favoriteColor": "blue",
+    "birthday": "03/05/1949"
+}
+
+### Update a contact
+PUT http://localhost:3000/api/contacts/68231b69e7ac37fad6186fb1
+Content-Type: application/json
+
+{
+    "favoriteColor": "white"
+}
+
+
+### Delete a contact
+DELETE http://localhost:3000/api/contacts/68231b69e7ac37fad6186fb1
+
+
+
+### PRODUCTION ============================================================== 
+### Testing the production server or URL link / resource from render.com.
+GET https://cse341-degzcontacts.onrender.com/api/contacts
+
+
+### Get a contact by ID using the production server or URL link from render.com.
+GET https://cse341-degzcontacts.onrender.com/api/contacts/681a53a16ce0f6ca3c12e5d3

@@ -10,6 +10,7 @@ import dotenv from "dotenv";
 // Load environment variables from .env file
 // dotenv.config() is used to load environment variables from a .env file into process.env
 dotenv.config();
+// Import the app and PORT from app.js
 
 const startServer = async () => {
   try {
