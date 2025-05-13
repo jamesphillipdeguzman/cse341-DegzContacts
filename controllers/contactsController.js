@@ -1,5 +1,5 @@
 // Defines the controller functions for handling contact-related requests.
-import Contacts from "../models/Contacts.js";
+import Contacts from "../models/contacts.js";
 
 // Get all contacts
 export const getAllContacts = async (req, res) => {
@@ -62,12 +62,10 @@ export const updateContact = async (req, res) => {
 
     res.status(200).json(updatedContact);
   } catch (error) {
-    res
-      .status(500)
-      .json({
-        message: "Could not update the document.",
-        error: error.message,
-      });
+    res.status(500).json({
+      message: "Could not update the document.",
+      error: error.message,
+    });
   }
 };
 
@@ -85,11 +83,9 @@ export const deleteContact = async (req, res) => {
 
     res.status(200).json(deletedContact);
   } catch (error) {
-    res
-      .status(500)
-      .json({
-        message: "Could not delete the document.",
-        error: error.message,
-      });
+    res.status(500).json({
+      message: "Could not delete the document.",
+      error: error.message,
+    });
   }
 };
