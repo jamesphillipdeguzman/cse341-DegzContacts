@@ -11,7 +11,10 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:3000",
+        url: "https://cse341-degzcontacts.onrender.com",
+      },
+      {
+        url: "http:localhost:3000",
       },
     ],
   },
