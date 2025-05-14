@@ -8,15 +8,24 @@
     "server": "nodemon server.js",
     "start": "node server.js",
     "inspect": "node --inspect server.js",
-    "debug": "node --inspect-brk server.js"
+    "debug": "node --inspect-brk server.js",
+    "db": "node ./config/db.config.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "contacts project",
+    "nodejs",
+    "mongodb",
+    "express",
+    "mongoose",
+    "api"
+  ],
+  "author": "James Phillip De Guzman",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "mongodb": "^6.16.0",
     "mongoose": "^8.14.1",
     "morgan": "^1.10.0",
     "swagger-jsdoc": "^6.2.8",
@@ -27,5 +36,5 @@
     "eslint-plugin-node": "^11.1.0",
     "nodemon": "^3.1.10"
   },
-  "description": ""
+  "description": "A contacts API project for my course CSE341 - Web Services using express, node.js, and mongoose. It also use swagger for API documentation on each CRUD operation."
 }
