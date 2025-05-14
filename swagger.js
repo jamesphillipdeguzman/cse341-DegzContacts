@@ -1,5 +1,6 @@
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
+import fs from "fs";
 
 const options = {
   definition: {
@@ -22,6 +23,13 @@ const options = {
 };
 
 const swaggerSpec = swaggerJsdoc(options);
+
+// Write the swaggerSpec to swagger.json
+fs.writeFileSync(
+  "./swagger.json",
+  JSON.stringify(swaggerSpec, null, 2),
+  "utf-8"
+);
 
 export default function (app) {
   app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
