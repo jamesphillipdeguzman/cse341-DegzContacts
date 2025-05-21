@@ -2,11 +2,11 @@
 // Defines the Mongoose schema for a contact.
 import mongoose from "mongoose";
 const contactSchema = new mongoose.Schema({
-  firstName: String,
-  lastName: String,
-  email: String,
-  favoriteColor: String,
-  birthday: String,
+  firstName: { type: String, required: true },
+  lastName: { type: String, required: true },
+  email: { type: String, required: true },
+  favoriteColor: { type: String, required: true },
+  birthday: { type: String, required: true },
 });
 
 // Create a model using the schema

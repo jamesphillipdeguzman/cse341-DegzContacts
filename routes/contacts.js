@@ -1,4 +1,5 @@
 import express from "express";
+import { param } from "express-validator";
 import {
   getAllContacts,
   findContactById,
@@ -6,6 +7,10 @@ import {
   updateContact,
   deleteContact,
 } from "../controllers/contactsController.js";
+
+import { validate } from "../middlewares/validate.js";
+import { validateContact } from "../middlewares/validateContact.js";
+import { validateContactUpdate } from "../middlewares/validateContactUpdate.js";
 
 const router = express.Router();
 // AI helped with debugging the indentation problems with this documentation
@@ -75,7 +80,7 @@ router.get("/:id", findContactById);
  *       500:
  *         description: An error occurred while creating the contact
  */
-router.post("/", createContact);
+router.post("/", validateContact, validate, createContact);
 
 // PUT update contact
 /**
@@ -115,7 +120,15 @@ router.post("/", createContact);
  *       500:
  *         description: An error occurred while updating the contact
  */
-router.put("/:id", updateContact);
+router.put(
+  "/:id",
+  [
+    param("id").isMongoId().withMessage("Invalid product ID"),
+    ...validateContactUpdate,
+    validate,
+  ],
+  updateContact
+);
 
 // DELETE contact
 /**

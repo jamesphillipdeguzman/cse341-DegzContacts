@@ -20,11 +20,11 @@ Content-Type: application/json
 }
 
 ### Update a contact in localhost
-PUT http://localhost:3000/api/contacts/68231b69e7ac37fad6186fb1
+PUT http://localhost:3000/api/contacts/681ad28c07a9bd6cc940f977
 Content-Type: application/json
 
 {
-    "favoriteColor": "white"
+    "favoriteColor": "blue"
 }
 
 
